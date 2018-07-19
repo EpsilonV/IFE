@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Double inline-block layou</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+<style type="text/css">
+    .container {
+        height: 400px;
+        font-size: 0;
+    }
+
+    .container .left {
+        background-color: green;
+        width: 200px;
+    }
+
+    .container .right {
+        background-color: red;
+        width: calc(100% - 200px);
+    }
+
+    .container .left,
+    .container .right {
+        height: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+</html>

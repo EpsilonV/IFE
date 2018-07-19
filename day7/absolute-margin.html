@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absolute Margin Layout</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+<style type="text/css">
+    .container {
+
+    }
+
+    .container .left {
+        position: absolute;
+        width: 200px;
+        background-color: green;
+    }
+
+    .container .right {
+        margin-left: 200px;
+        background-color: red;
+    }
+
+    .container .left,
+    .container .right {
+        height: 400px;
+    }
+</style>
+</html>

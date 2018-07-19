@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float Margin layout</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+<style type="text/css">
+    .container {
+        border: black 10px solid;
+    }
+
+    .container .left {
+        float: left;
+        width: 200px;
+        background-color: green;
+    }
+
+    .container .right {
+        margin-left: 200px;
+        background-color: red;
+    }
+
+    .container .left,
+    .container .right {
+        height: 400px;
+        box-sizing: border-box;
+    }
+</style>
+</html>
