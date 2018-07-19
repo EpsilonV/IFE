@@ -1,4 +1,5 @@
-98ttt<!DOCTYPE html>    n lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Website Layout</title>
@@ -18,7 +19,52 @@
             </div>
         </div>
         <div class="banner">
-            <img src="">     ``
+            <img src="../static/banner.jpg">
+            <div class="banner-nav">
+                <ul>
+                    <li><p>1</p></li>
+                    <li class="selected"><p>2</p></li>
+                    <li><p>3</p></li>
+                    <li><p>4</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="tabs">
+                <div class="selected"><p>HOME</p></div>
+                <div><p>PROFILE</p></div>
+                <div><p>ABOUT</p></div>
+            </div>
+        </div>
+        <div class="contents">
+            <div>
+                <h1>水调歌头·明月几时有</h1>
+                <p class="author">宋代：苏轼</p>
+                <p>丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</p>
+                <p>明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间？(何似 一作：何时；又恐 一作：惟 / 唯恐)
+                    转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。(长向 一作：偏向)</p>
+            </div>
+            <div>
+                <h1>夜夜曲</h1>
+                <p class="author">南北朝：沈约</p>
+                <p>河汉纵且横，北斗横复直。<br>
+                    星汉空如此，宁知心有忆？<br>
+                    孤灯暧不明，寒机晓犹织。<br>
+                    零泪向谁道，鸡鸣徒叹息。</p>
+            </div>
+            <div>
+                <h1>早发焉耆怀终南别业</h1>
+                <p class="author">唐代：岑参</p>
+                <p>晓笛引乡泪，秋冰鸣马蹄。<br>
+                    一身虏云外，万里胡天西。<br>
+                    终日见征战，连年闻鼓鼙。<br>
+                    故山在何处，昨日梦清溪。</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copyright">
+                2018 ife.baidu.com
+            </p>
         </div>
     </div>
 </body>
@@ -30,10 +76,11 @@
 
     body {
         margin: 0;
+        overflow: scroll;
     }
 
     .header {
-        background-color: gray;
+        background-color: rgb(51, 51, 51);
         height: 100px;
     }
 
@@ -63,6 +110,117 @@
 
     .banner {
         width: 100%;
+        height: 400px;
+    }
+
+    .banner img {
+        height: 100%;
+        width: 100%;
+        /*position: relative;*/
+    }
+
+    .banner-nav {
+        position: relative;
+        height: 80px;
+        width: 960px;
+        margin: 0 auto;
+        margin-top: -80px;
+        z-index: 100;
+    }
+
+    .banner-nav ul {
+        float: right;
+    }
+
+    .banner-nav ul li {
+        display: inline-block;
+        border: 1px black solid;
+        background-color: lightgray;
+        opacity: 0.5;
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    .banner-nav ul li p {
+        margin: 0;
+        padding: 6px 12px;
+    }
+
+    .banner-nav ul li.selected {
+        background-color: rgb(224, 241, 214);
+    }
+
+    .banner-nav ul li.selected p {
+        margin-top: 15px;
+    }
+
+    .main-nav {
+        height: 80px;
+        border-bottom: 1px rgb(221, 221, 221) solid;
+    }
+
+    .main-nav .tabs {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .main-nav .tabs div{
+        margin-top: 20px;
+        height: 60px;
+        float: left;
+        width: 120px;
+        border: 1px rgb(204, 204, 204) solid;
+        border-bottom: 0;
+        border-radius: 15px 15px 0px 0px;
+        background-color: rgb(238, 238, 238);
+        display: table-cell;
+        vertical-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .main-nav .tabs div.selected {
+        background-color: rgb(255,255,255);
+    }
+
+    .main-nav p {
+        text-align: center;
+    }
+
+    .container .contents {
+        width: 960px;
+        margin: 0 auto;
+        margin-bottom: 200px;
+        margin-top: 10px;
+    }
+
+    .container .contents div {
+        padding: 80px;
+        border: 1px rgb(204, 204, 204) solid;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-size: 0;
+    }
+
+    .container .contents div p{
+      font-size: 16px;
+    }
+
+    .author {
+        font-size: 10px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        height: 120px;
+        width: 100%;
+        background-color: rgb(102,102,102);
+    }
+
+    .footer p {
+        text-align: center;
     }
 </style>
 </html>
